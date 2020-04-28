@@ -16,7 +16,7 @@ The entry in `config.js` can include the following options:
 |`api_key`|**Required (SEE NOTES)** This is the API key assigned to you on the TfL Open Data Portal.  Details on how to request an API key can be found [here](https://api-portal.tfl.gov.uk/docs)<br><br>**Type:** `string`<br>|
 |`show_all`|This determines if the module displays all of the tube lines all the time (`true`) or just those currently affected by some sort of outage (`false`).  If this is used and all lines are good then a single line indicates this.<br><br>**Type:** `boolean`<br>**Default value:** true|
 |`interval`|How often the tube status is updated.<br><br>**Type:** `integer`<br>**Default value:** `600000 // 10 minutes`|
-|'Covid'|This determines whether 'Special Service' is ommitted. Only valid when 'show_all' is 'false'.<br><br> **Type:**'Boolean'<BR> **Default Value:**'false'|
+|`Covid`|This determines whether `Special Service` is ommitted. Only valid when `show_all` is `false`.<br><br> **Type:**`Boolean`<BR> **Default Value:**`false`|
 
 Here is an example of an entry in `config.js`
 ```
