@@ -11,6 +11,7 @@ Module.register('MMM-Tube-Status', {
             app_id:     '',
             api_key:    '',
             show_all:   true,
+            covid: false,
             interval:   600000 // Every 10 mins
         },
 
@@ -79,6 +80,8 @@ Module.register('MMM-Tube-Status', {
                     switch (severity) {
                         case 'Good Service':
                         case 'No Issues':
+                        case 'Special Service':
+                       
                             lineStatus.className = 'lineStatus goodStatus';
                             break;
                         case 'Part Closure':
@@ -114,11 +117,10 @@ Module.register('MMM-Tube-Status', {
                     if (this.config.show_all) {
                         tubeResults.appendChild(lineRow);
                     } else {
-                        if (lineStatus.innerHTML != 'Good Service') {
+                        if ((lineStatus.innerHTML != 'Good Service')&&(!(this.config.covid)||(lineStatus.innerHTML != 'Special Service'))) { //&&(lineStsaus.innerHTML = 'Special Service')&&(this.config.covid)                            
                             tubeResults.appendChild(lineRow);
                         } else {
                             goodService++;
-
                             if (goodService === this.result.length) {
                                 allRow = document.createElement('tr');
 
