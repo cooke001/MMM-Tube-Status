@@ -37,6 +37,7 @@ Here is an example of an entry in `config.js`
 ## Notes
 **IMPORTANT** In this first version, while shown as required, the `app_id` and the `api_key` are unused until I get a response from TfL on how to apply the data limits correctly.  As a result this uses an anonymous request and it is possible this may break after a period of requests.  Again I am awaiting to hear what the request and data limits are so that this can be used correctly.
 I hope you like this module, this was built at the request of `djbenny07`on the MagicMirror2 forum.  Feel free to submit pull requests or post issues and I'll do my best to respond.
+04/2020 - I added an option to hide `Special Status` when `show_all` is false - due to Covid-19 this fills up the screen! Also added `Special Status` to a the case structure to allow for it to be color coded.
 
 ## Thanks To...
 - [Michael Teeuw](https://github.com/MichMich) for the [MagicMirror2](https://github.com/MichMich/MagicMirror/tree/develop) framework that made this module possible.
